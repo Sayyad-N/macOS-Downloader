@@ -1,5 +1,5 @@
 # Code written by SayyadN
-# Date: 2025-03-14
+# Date: 2025-5-2
 # macrecovery code from Opencore, Link: https://tinyurl.com/opecoreguide
 
 # Import Required Libraries
@@ -11,7 +11,7 @@ import pyperclip
 import webbrowser
 
 
-# Main variables
+# Main variables for making programming easy
 p = print
 user_input = input
 run = os.system
@@ -20,11 +20,6 @@ ifit = os.path.exists
 copy = pyperclip.copy
 go = webbrowser.open
 
-
-def create_qr(data, filename):
-    code128 = barcode.get_barcode_class('code128')
-    barcode_instance = code128(data, writer=ImageWriter())
-    barcode_instance.save(filename)
 
 
 def check_files_path():
@@ -336,7 +331,7 @@ def mac_os_download():
         {
             'version': '11. Monterey (12)',
             'Link': [
-                'https://tinyurl.com/Montereymac'
+                'https://tinyurl.com/bdnhhbnm'
             ]
         },
         
@@ -344,7 +339,7 @@ def mac_os_download():
         {
             'version': '12. Ventura (13)',
             'Link': [
-                'https://tinyurl.com/Venturamac'
+                'https://tinyurl.com/yc8ywc8c'
             ]
         },
         
@@ -352,18 +347,18 @@ def mac_os_download():
         {
             'version': '13. Sonoma (14)',
             'Link': [
-                'https://tinyurl.com/macSonoma'
+                'https://tinyurl.com/ynpe3tvr'
             ]
         },
         # Latest version - Sequoia (15)
         {
             'version': '14. Sequoia (15)',
             'Link': [
-                'https://tinyurl.com/Sequoia4'
+                'https://tinyurl.com/bde9mm57'
+                
             ]
         }
     ]
-    
     # Print All macOS Images Versions
     for mac_img in macos_images_versions:
         print(f"macOS Version: {mac_img['version']}")
@@ -456,7 +451,7 @@ def main():
     p("1. Download macOS Recovery")
     p("2. Download macOS Image")
     p("3. Check Files Path")
-    p("4. Create Barcode")
+    p("4. Exit")
     wait(1)  # Wait One Second
 
     user_option = int(user_input("Please Enter Your Number :" ))
@@ -469,10 +464,9 @@ def main():
     elif user_option == 3:
         check_files_path()
     elif user_option == 4:
-        data = user_input("Enter the data for the barcode: ")
-        filename = user_input("Enter the filename for the barcode image: ")
-        create_qr(data, filename)
-        p(f"Barcode created and saved as {filename}.png")
+        p("Exiting the program.")
+        exit()
+        return 0 
     else:
         p("Invalid Option. Please try again.")
         exit(1)
