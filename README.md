@@ -25,7 +25,7 @@ This script provides a user-friendly interface to download macOS recovery images
 ### Installing Required Libraries
 To install the required Python libraries, run:
 ```sh
-pip install python-barcode pyperclip
+pip install webbrowser pyperclip
 ```
 
 ### Running the Scripts
