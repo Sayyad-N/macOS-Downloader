@@ -1,14 +1,18 @@
 # Code written by SayyadN
-# Date: 2025-5-2
-# macrecovery code from Opencore, Link: https://tinyurl.com/opecoreguide
+# Code Version 1.1.1
+#Date : 5-6-2025
+# Code For Download macOS Recovery and get macos (Images )
+
+# Resources
+#  macrecovery_open_core : https://tinyurl.com/bdfkbw43
+#  olarila_vanilla_images: https://tinyurl.com/mr442fz6
+#  olarila_efis : https://tinyurl.com/rkr3w93n
 
 # Import Required Libraries
 import os
-import barcode
-from barcode.writer import ImageWriter
 import time
-import pyperclip
 import webbrowser
+import pyperclip
 
 
 # Main variables for making programming easy
@@ -53,15 +57,13 @@ def check_files_path():
 def mac_recovery_download():
     # Lists of macos Recovery Downloads 
     macos_recovery_versions = [
-        # Added By SayyadN
-        # Urls Source (Opencore): https://tinyurl.com/macrecoveryopen
-        
+
         # Lion (10.7)
         {
             'version': '1 .Lion (10.7)',
             'commands': [
-                'python macrecovery.py -b Mac-2E6FAB96566FE58C -m 00000000000F25Y00 download',
-                'python macrecovery.py -b Mac-C3EC7CD22292981F -m 00000000000F0HM00 download'
+                'python3 macrecovery.py -b Mac-2E6FAB96566FE58C -m 00000000000F25Y00 download',
+                'python3 macrecovery.py -b Mac-C3EC7CD22292981F -m 00000000000F0HM00 download'
             ]
         },
         
@@ -69,7 +71,7 @@ def mac_recovery_download():
         {
             'version': '2. Mountain Lion (10.8)',
             'commands': [
-                'python macrecovery.py -b Mac-7DF2A3B5E5D671ED -m 00000000000F65100 download'
+                'python3 macrecovery.py -b Mac-7DF2A3B5E5D671ED -m 00000000000F65100 download'
             ]
         },
         
@@ -77,7 +79,7 @@ def mac_recovery_download():
         {
             'version': '3. Mavericks (10.9)',
             'commands': [
-                'python macrecovery.py -b Mac-F60DEB81FF30ACF6 -m 00000000000FNN100 download'
+                'python3 macrecovery.py -b Mac-F60DEB81FF30ACF6 -m 00000000000FNN100 download'
             ]
         },
         
@@ -85,7 +87,7 @@ def mac_recovery_download():
         {
             'version': '3. Yosemite (10.10)',
             'commands': [
-                'python macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000GDVW00 download'
+                'python3 macrecovery.py -b Mac-E43C1C25D4880AD6 -m 00000000000GDVW00 download'
             ]
         },
         
@@ -93,7 +95,7 @@ def mac_recovery_download():
         {
             'version': '4. El Capitan (10.11)',
             'commands': [
-                'python macrecovery.py -b Mac-FFE5EF870D7BA81A -m 00000000000GQRX00 download'
+                'python3 macrecovery.py -b Mac-FFE5EF870D7BA81A -m 00000000000GQRX00 download'
             ]
         },
         
@@ -101,7 +103,7 @@ def mac_recovery_download():
         {
             'version': '5. Sierra (10.12)',
             'commands': [
-                'python macrecovery.py -b Mac-77F17D7DA9285301 -m 00000000000J0DX00 download'
+                'python3 macrecovery.py -b Mac-77F17D7DA9285301 -m 00000000000J0DX00 download'
             ]
         },
         
@@ -109,8 +111,8 @@ def mac_recovery_download():
         {
             'version': '6. High Sierra (10.13)',
             'commands': [
-                'python macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m 00000000000J80300 download',
-                'python macrecovery.py -b Mac-BE088AF8C5EB4FA2 -m 00000000000J80300 download'
+                'python3 macrecovery.py -b Mac-7BA5B2D9E42DDD94 -m 00000000000J80300 download',
+                'python3 macrecovery.py -b Mac-BE088AF8C5EB4FA2 -m 00000000000J80300 download'
             ]
         },
         
@@ -118,7 +120,7 @@ def mac_recovery_download():
         {
             'version': '7. Mojave (10.14)',
             'commands': [
-                'python macrecovery.py -b Mac-7BA5B2DFE22DDD8C -m 00000000000KXPG00 download'
+                'python3 macrecovery.py -b Mac-7BA5B2DFE22DDD8C -m 00000000000KXPG00 download'
             ]
         },
         
@@ -126,7 +128,7 @@ def mac_recovery_download():
         {
             'version': '8. Catalina (10.15)',
             'commands': [
-                'python macrecovery.py -b Mac-00BE6ED71E35EB86 -m 00000000000000000 download'
+                'python3 macrecovery.py -b Mac-00BE6ED71E35EB86 -m 00000000000000000 download'
             ]
         },
         
@@ -134,7 +136,7 @@ def mac_recovery_download():
         {
             'version': '9. Big Sur (11)',
             'commands': [
-                'python macrecovery.py -b Mac-42FD25EABCABB274 -m 00000000000000000 download'
+                'python3 macrecovery.py -b Mac-42FD25EABCABB274 -m 00000000000000000 download'
             ]
         },
         
@@ -142,7 +144,7 @@ def mac_recovery_download():
         {
             'version': '10. Monterey (12)',
             'commands': [
-                'python macrecovery.py -b Mac-FFE5EF870D7BA81A -m 00000000000000000 download'
+                'python3 macrecovery.py -b Mac-FFE5EF870D7BA81A -m 00000000000000000 download'
             ]
         },
         
@@ -150,7 +152,7 @@ def mac_recovery_download():
         {
             'version': '11. Ventura (13)',
             'commands': [
-                'python macrecovery.py -b Mac-4B682C642B45593E -m 00000000000000000 download'
+                'python3 macrecovery.py -b Mac-4B682C642B45593E -m 00000000000000000 download'
             ]
         },
         
@@ -158,15 +160,15 @@ def mac_recovery_download():
         {
             'version': '12. Sonoma (14)',
             'commands': [
-                'python macrecovery.py -b Mac-226CB3C6A851A671 -m 00000000000000000 download'
+                'python3 macrecovery.py -b Mac-226CB3C6A851A671 -m 00000000000000000 download'
             ]
         },
         
         # Latest version - Sequoia (15)
         {
-            'version': '13. Sequoia (15)',
+            'version': '13. Sequoia (Lasted)',
             'commands': [
-                'python macrecovery.py -b Mac-937A206F2EE63C01 -m 00000000000000000 download'
+                'python3 macrecovery.py -b Mac-937A206F2EE63C01 -m 00000000000000000 download'
             ]
         }
     ]
@@ -245,9 +247,7 @@ def mac_recovery_download():
 def mac_os_download():
     # List Of macOS Images Versions Original 
     macos_images_versions = [
-        # Added By SayyadN
-        # Urls Source (Orilla Hackintosh) extracted from ads , Links: https://tinyurl.com/orillahackintosh
-        # Lion (10.7)
+         # Lion (10.7)
         {
             'version': '1 .Lion (10.7)',
             'Link': [
@@ -339,7 +339,7 @@ def mac_os_download():
         {
             'version': '12. Ventura (13)',
             'Link': [
-                'https://tinyurl.com/yc8ywc8c'
+                'https://tinyurl.com/2aaccm3s'
             ]
         },
         
@@ -347,14 +347,14 @@ def mac_os_download():
         {
             'version': '13. Sonoma (14)',
             'Link': [
-                'https://tinyurl.com/ynpe3tvr'
+                'https://tinyurl.com/mpwzvsmu'
             ]
         },
         # Latest version - Sequoia (15)
         {
             'version': '14. Sequoia (15)',
             'Link': [
-                'https://tinyurl.com/bde9mm57'
+                'https://tinyurl.com/2mwx8xf2'
                 
             ]
         }
@@ -443,7 +443,7 @@ def mac_os_download():
         exit(1)
 
 
-# main function
+# main function 
 def main():
     p("App made by SayyadN")
     p("Welcome to macOS Recovery and macOS Image Download Tool.")
